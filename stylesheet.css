@@ -1,0 +1,43 @@
+/*------------------------------------------
+1: Variables & Common styling
+2: Layout / Grid
+3: Form styling
+4: Page specific styles
+------------------------------------------*/
+
+/*------------------------------------------
+1: Variables & Common styling
+------------------------------------------*/
+/*Variables*/
+:root{
+    --color-black:#2B2F3B;
+}
+
+
+/*Common styling*/
+.rounded{
+    border-radius:5px;
+}
+
+label, input[type=text],input[type=email], input[type=password], input[type=submit] {
+    padding: 1em;
+}
+input[type=text], input[type=email], input[type=password] {
+    border: 1px solid black;
+}
+
+
+/*------------------------------------------
+2: Layout / Grid
+------------------------------------------*/
+
+
+
+/*------------------------------------------
+3: Form styling
+------------------------------------------*/
+
+
+/*------------------------------------------
+4: Page specific styles
+------------------------------------------*/
