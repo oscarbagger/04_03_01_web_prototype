@@ -11,33 +11,272 @@
 /*Variables*/
 :root{
     --color-black:#2B2F3B;
+    --color-grey:#FAF7F7;
+    --color-red:#EA5045;
+    --color-lightred:#F58E81;
+    --color-purple:#3F3140;
 }
-
 
 /*Common styling*/
-.rounded{
-    border-radius:5px;
+
+body {
+    background-color: var(--color-grey);
+    margin: 0px;
+}
+h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-red);
+}
+/*Header styling */
+header {
+    position: fixed;
+    overflow: hidden;
+    background-color: var(--color-red);
+    width: 100%;
+}
+.expand {
+    height:100%;
+    background-color: var(--color-purple);
 }
 
-label, input[type=text],input[type=email], input[type=password], input[type=submit] {
-    padding: 1em;
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 30px 20px 20px ;
 }
-input[type=text], input[type=email], input[type=password] {
-    border: 1px solid black;
+
+
+.hidden {
+    display: none;
+    transform: scale(0);
+    transform: translateX(-100%);
+    opacity: 0;
 }
+#headerprofile {
+    position: relative;
+    right: 30px
+}
+#headerlogo {
+    position: absolute;
+    left: 20px;
+}
+#headerbiglogo {
+    position:absolute;
+    top: 10%;
+    left: 46%;
+    transform: scale(3);
+}
+
+#menuknap {
+    display: inline-block;
+    position: fixed,
+}
+
+#menu {
+    list-style-type: none;
+    transition: transform .3s;
+    transform-origin: top left;
+    text-align: center;
+    background-color: var(--color-purple);
+    width: 100%;
+    line-height: 10vh;
+    padding-top: 16vh;
+    margin: 0;
+    padding-left:0px;
+}
+li a {
+    color: var(--color-lightred);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+#logout {
+    background-color: var(--color-lightred);
+    position: absolute;
+    height: 7vh;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+#logout p {
+    margin: 10px;
+    color: white;
+}
+
+@media only screen and (min-width: 600px) {
+    #logout {
+        width: 50vw;
+        left: 25vw;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #logout {
+        width: 25vw;
+        left: 37vw;
+    }
+}
+/*
+@media only screen and (min-width: 600px) {
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+} */
 
 
 /*------------------------------------------
 2: Layout / Grid
 ------------------------------------------*/
-
-
-
+.container {
+    display: grid;
+    grid-template-columns: 125px 125px 125px;
+    grid-template-rows: 125px 125px 125px 125px 125px 125px;
+    grid-gap: 10px;
+    justify-content: center;
+    padding-top: 68px
+}
+.item {
+    background-color: white;
+    display: grid;
+    justify-items:center;
+    align-items: center;
+    padding-top: 20px;
+    color: var(--color-lightred)
+}
+.item-4 {
+    grid-column: 1/span 2;
+}
+.item-10 {
+    grid-column: 2/span 2;
+    grid-row: 4/span 2;
+}
 /*------------------------------------------
 3: Form styling
 ------------------------------------------*/
+.rounded{
+    border-radius:10vw;
+}
+::placeholder {
+    color: var(--color-red);
+}
+
+label, input[type=text],input[type=email], input[type=password], input[type=submit] {
+    margin: 1em;
+    width: 70vw;
+    height: 6vh;
+    text-indent: 10px;
+    color: var(--color-red);
+}
+input[type=text], input[type=email], input[type=password] {
+    border:none;
+}
+
+#remembercheckbox {
+    text-align: right;
+    padding-right: 30px;
+    padding-bottom: 10vw;
+}
+#continue input[type=submit] {
+    background-color: var(--color-red);
+    border:none;
+    text-align: center;
+    text-transform: uppercase;
+    text-indent: 0px;
+    color: white;
+}
+#facebook input[type=submit] {
+    background-color: white;
+    border: solid 2px;
+    text-align: center;
+    text-transform: uppercase;
+    text-indent: 0px;
+    color: var(--color-red);
+}
+.glemtpassword {
+    padding: 10px;
+}
+.glemtpassword a {
+    color: var(--color-red);
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 900px) {
+label, input[type=text],input[type=email], input[type=password], input[type=submit] {
+    width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+label, input[type=text],input[type=email], input[type=password], input[type=submit] {
+    width: 25vw;
+    }
+}
 
 
 /*------------------------------------------
 4: Page specific styles
 ------------------------------------------*/
+
+/* login */
+#loginheader {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+#loginheader #bigheaderlogo {
+    padding-top: 70px;
+}
+#loginheader img {
+    height: auto;
+    width: 30vw;
+}
+#logincontent{
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media only screen and (min-width: 1200px) {
+    #loginheader img {
+    width: 20vw;
+    }
+}
+
+/* Afleveringer */
+
+#afleveringer {
+    padding-top: 68px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color:white;
+    margin: auto;
+    max-width: 600px;
+}
+
+.boxgroup {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    background-color: var(--color-grey);
+    padding: 10px;
+    margin-bottom: 16px;
+}

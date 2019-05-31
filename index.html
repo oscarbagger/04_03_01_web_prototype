@@ -1,5 +1,5 @@
 <!Doctype html>
-<html lang="da">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,30 +8,34 @@
 </head>
 
 <body>
-    <header>
+    <header id="loginheader">
         <nav>
+            <div id="bigheaderlogo"><img src="assets/artwork%202.svg"></div>
         </nav>
     </header>
-    <h1>Fronter vs. Kea</h1>
-
-    <form class="loginform" action="forside.html">
-        <div class="formgroup">
-            <label>Brugernavn</label>
-            <input type="text" placeholder="Indtast brugernavn" class="rounded">
+    <div id="logincontent">
+        <form class="loginform" action="forside.html">
+            <div class="formgroup">
+                <input type="text" placeholder="email or username" class="rounded">
+            </div>
+            <div class="formgroup">
+                <input type="password" placeholder="●●●●●●●" class="rounded">
+            </div>
+            <div class="formgroup" id="remembercheckbox">
+                <label>Remember me</label>
+                <input type="checkbox" value="logincheck" class="rounded">
+            </div>
+            <div class="formgroup" id="continue">
+                <input type="submit" value="continue" class="rounded">
+            </div>
+            <div class="formgroup" id="facebook">
+                <input type="submit" value="login with facebook" class="rounded" >
+            </div>
+        </form>
+        <div class="glemtpassword">
+            <a href="">Forgot password?</a>
         </div>
-        <div class="formgroup">
-            <label>Password</label>
-            <input type="password" placeholder="Indtast password" class="rounded">
-        </div>
-        <div class="formgroup">
-            <input type="submit" value="Log ind">
-        </div>
-    </form>
-
-    <div class="glemtpassword">
-        <a href="">Glemt password?</a>
     </div>
-
     <footer></footer>
 </body>
 
