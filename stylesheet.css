@@ -140,6 +140,12 @@ li a {
     }
 } */
 
+#disclaimer {
+    position: fixed;
+    bottom:0px;
+    left 0px;
+    font-size: 10px;
+}
 
 /*------------------------------------------
 2: Layout / Grid
@@ -158,7 +164,7 @@ li a {
     justify-items:center;
     align-items: center;
     padding-top: 20px;
-    color: var(--color-lightred)
+    color: var(--color-red)
 }
 .item-4 {
     grid-column: 1/span 2;
@@ -186,6 +192,10 @@ label, input[type=text],input[type=email], input[type=password], input[type=subm
 }
 input[type=text], input[type=email], input[type=password] {
     border:none;
+}
+input[type=checkbox] {
+    border:none;
+    transform: scale(1.5);
 }
 
 #remembercheckbox {

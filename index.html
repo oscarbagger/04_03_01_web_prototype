@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="nofollow" />
     <link rel="stylesheet" href="stylesheet.css">
-    <title>Fronter vs. Kea</title>
+    <title>04-03 web prototype</title>
 </head>
 
 <body>
     <header id="loginheader">
         <nav>
-            <div id="bigheaderlogo"><img src="assets/artwork%202.svg"></div>
+            <div id="bigheaderlogo"><img src="assets/artwork%202.svg" alt="kea logo"></div>
         </nav>
     </header>
-    <div id="logincontent">
+    <main id="logincontent">
         <form class="loginform" action="forside.html">
             <div class="formgroup">
                 <input type="text" placeholder="email or username" class="rounded">
@@ -23,7 +25,7 @@
             </div>
             <div class="formgroup" id="remembercheckbox">
                 <label>Remember me</label>
-                <input type="checkbox" value="logincheck" class="rounded">
+                <input type="checkbox" value="logincheck">
             </div>
             <div class="formgroup" id="continue">
                 <input type="submit" value="continue" class="rounded">
@@ -35,7 +37,8 @@
         <div class="glemtpassword">
             <a href="">Forgot password?</a>
         </div>
-    </div>
+    </main>
+    <div id="disclaimer">DISLCAIMER: Dette er en studieproduktion, ikke KEAs officielle hjemmeside</div>
     <footer></footer>
 </body>
 
